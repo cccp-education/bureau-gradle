@@ -7,7 +7,7 @@
 |===
 | US | Description | Pts | Statut
 | BUREAU-0 | Cadrage EPIC | 1 | ✅ TERMINÉ (S-010)
-| BUREAU-1 | Bootstrap borough | 2 | 🟡 EN COURS (S-011)
+| BUREAU-1 | Bootstrap borough | 2 | ✅ TERMINÉ (S-001)
 | BUREAU-2 | CreateOffice task | 2 | 🔴 À FAIRE
 | BUREAU-3 | PullMaterial task | 2 | 🔴 À FAIRE
 | BUREAU-4 | Tool aggregation | 3 | 🔴 À FAIRE

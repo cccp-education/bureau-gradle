@@ -1,8 +1,8 @@
 = INDEX.adoc — Roadmap & Statut EPICs — bureau-gradle
 :jbake-status: EAGER
 
-*Dernière mise à jour* : 2026-08-13 (Session 011 — BUREAU-1 bootstrap borough créé.)
-*Session en cours* : 011 — BUREAU-1 bootstrap + figeage vision runtime-contracts.
+*Dernière mise à jour* : 2026-08-13 (Session 001 — BUREAU-1 bootstrap borough terminé.)
+*Session à venir* : 002 — BUREAU-2 CreateOffice task (scaffold office/ + git init).
 
 == Vision — Bureau de l'apprenant
 
@@ -27,7 +27,7 @@ agentique FormationRuntimePort pour edster.cloud).
 |===
 | US | Description | Pts | Statut
 | BUREAU-0 | *Cadrage EPIC* — audit pilot-plugin, classification OSS/privé, découpage US | 1 | ✅ TERMINÉ (S-010)
-| BUREAU-1 | *Bootstrap borough* — `foundry/public/bureau-gradle/` créé. Gouvernance + build + wrapper | 2 | 🟡 EN COURS (S-011)
+| BUREAU-1 | *Bootstrap borough* — `foundry/public/bureau-gradle/` créé. Gouvernance + build + wrapper | 2 | ✅ TERMINÉ (S-001)
 | BUREAU-2 | *CreateOffice task* — scaffold `office/` + `git init` | 2 | 🔴 À FAIRE
 | BUREAU-3 | *PullMaterial task* — MaterialUpdateContract + git pull | 2 | 🔴 À FAIRE
 | BUREAU-4 | *Tool aggregation* — BureauExtension + includeBuild OSS plugins | 3 | 🔴 À FAIRE
@@ -63,6 +63,5 @@ bureau-gradle/
 [cols="2,2,5", options="header"]
 |===
 | Session | Date | Focus
-| 011 | 2026-08-13 | BUREAU-1 bootstrap borough + figeage vision runtime-contracts (7 contrats figés)
-| 010 | 2026-08-12 | Cadrage EPIC Runtime Agentique + vision formation interactive (brainstorming, zéro code)
+| 001 | 2026-08-13 | BUREAU-1 bootstrap borough Saint-Denis (23 fichiers, 1 test PASS, push github.com/cccp-education/bureau-gradle.git)
 |===
