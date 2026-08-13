@@ -1,0 +1,10 @@
+.gradle/
+/build/
+/bureau-plugin/build/
+!gradle/wrapper/gradle-wrapper.jar
+!bureau-plugin/gradle/wrapper/gradle-wrapper.jar
+.idea/
+*.iml
+.kotlin/
+local.properties
+*.bak

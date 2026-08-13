@@ -1,0 +1,35 @@
+= PROMPT_REPRISE.adoc — bureau-gradle — Session 011 EN COURS
+:session: 011
+:date: 2026-08-13
+:etat: EN COURS
+:epic_actif: BUREAU-1 (bootstrap borough)
+
+== Ce qui a été fait (Session 011)
+
+- ✅ Figeage vision runtime-contracts (7 contrats figés dans VISION_FORMATION_INTERACTIVE.adoc)
+- ✅ Refonte EPIC BUREAU (8 US ~16 pts, découpage refondu dans CADRAGE_EPIC_RUNTIME_AGENTIQUE.adoc)
+- ✅ Surnom Saint-Denis (93, France) figé
+- ✅ BUREAU-1 bootstrap borough créé :
+  - Structure foundry/public/bureau-gradle/ + bureau-plugin/ (pattern container-provision)
+  - BureauPlugin.kt + BureauExtension.kt (stub minimal)
+  - BureauPluginTest.kt (unit test minimal)
+  - build.gradle.kts dogfooding conventions-gradle 0.0.3 + cucumber
+  - libs.versions.toml (Kotlin 2.4.10, JUnit 5, Cucumber 7.34.3)
+  - Gouvernance agent (AGENT.adoc, INDEX.adoc, BACKLOG.adoc, SESSION_CHECKLIST.adoc)
+  - LICENSE Apache 2.0
+  - Gradle wrapper 9.6.1
+
+== Prochaine mission — BUREAU-1 vérification + BUREAU-2
+
+. Vérifier que le build compile (`./gradlew check` dans bureau-plugin/)
+. Initialiser git repo + remote github.com/cccp-education/bureau-gradle.git
+. BUREAU-2 : CreateOffice task — scaffold `office/` structure + `git init`
+
+== Rappels
+
+- bureau-gradle = point d'entrée CLI/Docker apprenant (OSS, cccp-education)
+- 3 rôles : créer office, créer items via outils OSS, consommer formation
+- Open core : bureau-gradle (OSS) + workspace-gradle (privé, runtime agentique)
+- LLM via codebase N1 (LlmBuildService, LlmProviderResolver) — pas de réinvention
+- MaterialUpdateContract = git pull (figé session 011)
+- ToolExposure = boroughs publics uniquement, pas de subset par rôle (figé session 011)
