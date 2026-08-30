@@ -1,0 +1,9 @@
+= SESSIONS_HISTORY.adoc — bureau-gradle
+:jbake-status: EAGER
+
+== Sessions
+
+|===
+| # | Date | Focus | Tests | Build
+| 001 | 2026-08-13 | BUREAU-1 bootstrap borough Saint-Denis (23 fichiers, 1 test PASS, push github.com/cccp-education/bureau-gradle.git) | 1/1 PASS | BUILD SUCCESSFUL
+|===

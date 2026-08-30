@@ -1,0 +1,12 @@
+= COMPLETED_TASKS_ARCHIVE — 2026-08 (bureau-gradle)
+:jbake-status: EAGER
+
+== Session 001 (2026-08-13)
+
+. ✅ BUREAU-1 Bootstrap borough — foundry/public/bureau-gradle/ créé (pattern article 0124)
+. ✅ Racine consommateur + bureau-plugin/ build indépendant
+. ✅ BureauPlugin.kt + BureauExtension.kt (stub minimal)
+. ✅ BureauPluginTest.kt (1 unit test PASS)
+. ✅ Gouvernance agent (AGENT, INDEX, BACKLOG, SESSION_CHECKLIST, PROMPT_REPRISE, SESSIONS_HISTORY)
+. ✅ LICENSE Apache 2.0
+. ✅ Git repo + push github.com/cccp-education/bureau-gradle.git (branche main, 23 fichiers)

@@ -1,0 +1,33 @@
+= PROMPT_REPRISE — bureau-gradle — Session 002 — BUREAU-2 CreateOffice task
+:session: 002
+:date: 2026-08-13
+:etat: À FAIRE
+:epic_actif: BUREAU-2 (CreateOffice task)
+
+== Session 001 terminée (2026-08-13)
+
+- ✅ BUREAU-1 bootstrap borough Saint-Denis (23 fichiers, 1 test PASS, push github.com/cccp-education/bureau-gradle.git)
+- ✅ Pattern article 0124 (Plugin Indépendant + Racine Consommateur)
+- ✅ Plugin id education.cccp.bureau, GroupId education.ccp, version 0.0.1
+
+== Prochaine mission (002) — BUREAU-2 CreateOffice task
+
+Implémenter la tâche `createOffice` dans bureau-plugin/.
+
+. Tâche Gradle `createOffice` (groupe `bureau`)
+. Scaffold de la structure `office/` : `office/articles/`, `office/formations/`, `office/specs/`, `office/assets/` + `metadata.json`
+. `git init` du repo office/
+. Baby-step TDD : ~4 unit tests
+. Publier dans mavenLocal + dogfooder depuis la racine consommateur
+
+*Voir* : `CADRAGE_EPIC_RUNTIME_AGENTIQUE.adoc` (racine workspace) § EPIC BUREAU US BUREAU-2
+
+== Rappels
+
+- bureau-gradle = point d'entrée CLI/Docker apprenant (OSS, cccp-education)
+- 3 rôles : créer office, créer items via outils OSS, consommer formation
+- Open core : bureau-gradle (OSS) + workspace-gradle (privé, runtime agentique)
+- LLM via codebase N1 (LlmBuildService, LlmProviderResolver) — pas de réinvention
+- MaterialUpdateContract = git pull (figé session 011 workspace-gradle)
+- ToolExposure = boroughs publics uniquement, pas de subset par rôle (figé session 011)
+- Pattern article 0124 : Plugin Indépendant + Racine Consommateur

@@ -1,0 +1,67 @@
+= INDEX.adoc — Roadmap & Statut EPICs — bureau-gradle
+:jbake-status: EAGER
+
+*Dernière mise à jour* : 2026-08-13 (Session 001 — BUREAU-1 bootstrap borough terminé.)
+*Session à venir* : 002 — BUREAU-2 CreateOffice task (scaffold office/ + git init).
+
+== Vision — Bureau de l'apprenant
+
+*bureau-gradle* est le point d'entrée CLI/Docker de l'apprenant pour
+l'écosystème education.ccp. Surnom : *Saint-Denis* (93, France).
+
+3 rôles :
+. **Create office** — scaffold `office/` (AsciiDoc pivot, git repo)
+. **Create items** — invoque les outils OSS (capsule, slider, document,
+  plantuml, bakery, planner, codebase, etc.)
+. **Consume training** — pull matériel pédagogique versionné (git)
+
+Open core : bureau-gradle (OSS) + workspace-gradle (privé, runtime
+agentique FormationRuntimePort pour edster.cloud).
+
+*Vision* : `foundry/private/workspace-gradle/.agents/VISION_FORMATION_INTERACTIVE.adoc`
+*Cadrage* : `CADRAGE_EPIC_RUNTIME_AGENTIQUE.adoc` (racine workspace, 12e document jardin secret)
+
+== Roadmap — EPIC BUREAU
+
+[cols="1,3,1,1", options="header"]
+|===
+| US | Description | Pts | Statut
+| BUREAU-0 | *Cadrage EPIC* — audit pilot-plugin, classification OSS/privé, découpage US | 1 | ✅ TERMINÉ (S-010)
+| BUREAU-1 | *Bootstrap borough* — `foundry/public/bureau-gradle/` créé. Gouvernance + build + wrapper | 2 | ✅ TERMINÉ (S-001)
+| BUREAU-2 | *CreateOffice task* — scaffold `office/` + `git init` | 2 | 🔴 À FAIRE
+| BUREAU-3 | *PullMaterial task* — MaterialUpdateContract + git pull | 2 | 🔴 À FAIRE
+| BUREAU-4 | *Tool aggregation* — BureauExtension + includeBuild OSS plugins | 3 | 🔴 À FAIRE
+| BUREAU-5 | *Diagnostics extraction* — 5 tâches utilitaires depuis workspace-gradle | 2 | 🔴 À FAIRE
+| BUREAU-6 | *Docker image* — Dockerfile multi-stage + CLI entrypoint | 2 | 🔴 À FAIRE
+| BUREAU-7 | *Publication Maven Central / Plugin Portal* | 2 | 🔴 À FAIRE
+|===
+
+_Total_ : 8 US, ~16 pts. _Statut_ : 1/8 US (cadrage) + 1 en cours.
+
+== Structure du projet
+
+----
+bureau-gradle/
+├── settings.gradle.kts              → racine consommateur (dogfood conventions 0.0.3)
+├── build.gradle.kts                 → applique education.cccp.build.cucumber 0.0.3
+├── bureau-plugin/                    → BUILD INDÉPENDANT (pattern article 0124)
+│   ├── gradlew                       → wrapper autonome
+│   ├── settings.gradle.kts           → rootProject.name = "bureau-plugin"
+│   ├── build.gradle.kts             → java-gradle-plugin + maven-publish + kotlin 2.4.10
+│   ├── gradle/libs.versions.toml     → version catalog
+│   └── src/main/kotlin/bureau/
+│       ├── BureauPlugin.kt           → plugin entry point
+│       └── BureauExtension.kt        → DSL extension
+├── .agents/AGENT.adoc, INDEX.adoc
+├── .agents/BACKLOG.adoc, SESSION_CHECKLIST.adoc
+├── Gradle wrapper + LICENSE
+└── .gitignore
+----
+
+== Sessions
+
+[cols="2,2,5", options="header"]
+|===
+| Session | Date | Focus
+| 001 | 2026-08-13 | BUREAU-1 bootstrap borough Saint-Denis (23 fichiers, 1 test PASS, push github.com/cccp-education/bureau-gradle.git)
+|===

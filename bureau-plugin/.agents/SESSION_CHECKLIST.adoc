@@ -1,0 +1,30 @@
+= SESSION_CHECKLIST.adoc — bureau-gradle
+:jbake-status: EAGER
+
+== Ouverture (à faire au début)
+
+. [ ] PROMPT_REPRISE injecté par opencode — ne pas lire localement
+. [ ] Lire AGENT.adoc
+. [ ] Lire .agents/INDEX.adoc
+. [ ] git status
+. [ ] ./gradlew tasks
+. [ ] Vérifier que le build compile
+
+== Mission — BUREAU-1 Bootstrap borough
+
+. [x] Créer structure bureau-gradle/ (settings, build, .gitignore, wrapper)
+. [x] Créer bureau-plugin/ (settings, build, libs.versions.toml, wrapper)
+. [x] BureauPlugin.kt + BureauExtension.kt (stub minimal)
+. [x] BureauPluginTest.kt (unit test minimal)
+. [x] LICENSE Apache 2.0
+. [x] Gouvernance agent (AGENT.adoc, INDEX.adoc, BACKLOG.adoc, SESSION_CHECKLIST.adoc)
+
+== Fermeture (7 étapes)
+
+. [ ] Étape 1 — Rapport de session
+. [ ] Étape 2 — PROMPT_REPRISE.adoc
+. [ ] Étape 3 — INDEX.adoc
+. [ ] Étape 4 — SESSIONS_HISTORY.adoc
+. [ ] Étape 5 — TEST_COVERAGE_ANALYSIS.adoc
+. [ ] Étape 6 — Archivage
+. [ ] Étape 7 — Synchronisation backlog
