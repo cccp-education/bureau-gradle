@@ -3,7 +3,7 @@
 
 == Règles absolues (ordre de priorité)
 
-. Zero commit/push without explicit permission
+. Commit/push/merge autorisés (décision pilote 2026-09-17). Ne JAMAIS commiter de secret.
 . Zero token/secret in code — all credentials via environment variables
 . Read PROMPT_REPRISE.adoc before any action
 . Check git status before coding
