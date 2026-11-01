@@ -14,7 +14,39 @@
 | BUREAU-5 | Diagnostics extraction | 2 | 🔴 À FAIRE
 | BUREAU-6 | Docker image | 2 | 🔴 À FAIRE
 | BUREAU-7 | Publication Maven Central / Plugin Portal | 2 | 🔴 À FAIRE
+| BUREAU-8 | `OfficeLayoutContract` (modèle canonique des zones `office/`) + tâche `verifyOfficeLayout` (garde anti-drift) | 2 | 🔴 À FAIRE
 |===
+
+'''
+== Observations — audit chaîne de livraison & accessibilité (2026-11-01)
+
+_Constat mesuré sur disque._
+
+[cols="1,4,2", options="header"]
+|===
+| # | Constat | Recommandation
+
+| O-1
+| Le borough est un **stub** : 3 fichiers `.kt`, 1 test, **aucune CI**. `createOffice`, `createItems` et `syncMaterial` ne sont pas implémentés.
+| Prioriser `BUREAU-2`/`BUREAU-3` : sans transport du matériel, la boîte de formation ne peut pas être assemblée.
+
+| O-2
+| Les boroughs producteurs **hardcodent** les chemins d'`office/` (drift constaté sur `office/sites/cheroliv/...` vs `office/sites/cheroliv.com/`).
+| `BUREAU-8` : `OfficeLayoutContract` + `verifyOfficeLayout` pour tuer la classe de bug.
+
+| O-3
+| `syncMaterial` devra transporter non seulement les `.adoc` mais aussi les livrables **accessibles** (HTML/EPUB, vidéo sous-titrée/audiodécrite) et leur **rapport d'audit**.
+| Étendre le contrat de matériel (`MaterialUpdateContract`) pour inclure le type de livrable et le rapport d'accessibilité ; refuser un livrable déclaré accessible sans rapport.
+|===
+
+== Renforcement BUREAU-2/BUREAU-3
+
+* `BUREAU-2` (createOffice) : devient prérequis de l'assemblage de la boîte (structure `office/`
+  conforme, `metadata.json`, versioning).
+* `BUREAU-3` (pullMaterial) : le transport doit être **neutre du type de livrable** (source,
+  HTML, EPUB, PDF, vidéo, rapport d'audit) et ne jamais exécuter de LLM ni de rendu.
+* Critère de sortie commun : un office créé par `createOffice` puis synchronisé par
+  `pullMaterial` est inspectable par `academy` sans correction manuelle.
 
 == Ordre d'exécution
 
