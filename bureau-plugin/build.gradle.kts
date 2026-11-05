@@ -1,3 +1,5 @@
+import org.gradle.plugin.compatibility.compatibility
+
 plugins {
     kotlin("jvm") version libs.versions.kotlin
     `java-gradle-plugin`
@@ -100,6 +102,12 @@ gradlePlugin {
             description = "Learner entry point CLI/Docker for education.ccp ecosystem — create office, create items via OSS tools, consume purchased training"
             implementationClass = "bureau.BureauPlugin"
             tags = listOf("cccp", "bureau", "office", "learner", "education")
+            compatibility {
+                features {
+                    configurationCache.set(false)
+                    isolatedProjects.set(false)
+                }
+            }
         }
     }
 }
