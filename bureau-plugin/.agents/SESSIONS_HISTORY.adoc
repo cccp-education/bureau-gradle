@@ -7,3 +7,9 @@
 | # | Date | Focus | Tests | Build
 | 001 | 2026-08-13 | BUREAU-1 bootstrap borough Saint-Denis (23 fichiers, 1 test PASS, push github.com/cccp-education/bureau-gradle.git) | 1/1 PASS | BUILD SUCCESSFUL
 |===
+
+== Session 002 — JitPack mirror (CNV-16) — 2026-11-09
+
+Publication JitPack de bureau-plugin 0.0.1 + correctif signature conditionnelle. JitPack : 0.0.1 — POM HTTP 200. Shim `useModule` pour
+`education.cccp.build.*` (tag JitPack `0.0.15`). Rapport
+`bureau-plugin/.agents/sessions/002-jitpack-mirror.adoc`.
