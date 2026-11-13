@@ -13,3 +13,13 @@
 Publication JitPack de bureau-plugin 0.0.1 + correctif signature conditionnelle. JitPack : 0.0.1 — POM HTTP 200. Shim `useModule` pour
 `education.cccp.build.*` (tag JitPack `0.0.15`). Rapport
 `bureau-plugin/.agents/sessions/002-jitpack-mirror.adoc`.
+
+== Session 003 — CNV-17 : JitPack canal unique — 2026-11-13
+
+JitPack devient le **canal unique** des artefacts publics (Central/Portal
+cessent d'être publiés pour `foundry/public/**`). Shim `useModule` aligné sur
+`conventions-plugin:0.0.17` (racine + sous-build), plateforme N0
+`com.github.cccp-education.workspace-bom:workspace-bom:0.0.136`. Coordonnée
+servie `com.github.cccp-education.bureau-gradle:bureau-plugin:0.0.1`. Aucune CI
+déclenchée ; aucun test local. Rapport
+`.agents/sessions/003-cnv-17-jitpack-channel.adoc`.

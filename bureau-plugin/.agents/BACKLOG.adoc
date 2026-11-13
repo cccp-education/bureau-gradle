@@ -13,7 +13,7 @@
 | BUREAU-4 | Tool aggregation | 3 | 🔴 À FAIRE
 | BUREAU-5 | Diagnostics extraction | 2 | 🔴 À FAIRE
 | BUREAU-6 | Docker image | 2 | 🔴 À FAIRE
-| BUREAU-7 | Publication Maven Central / Plugin Portal | 2 | 🔴 À FAIRE
+| BUREAU-7 | Publication JitPack (canal unique CNV-17) | 2 | ✅ TERMINÉ (S-002)
 | BUREAU-8 | `OfficeLayoutContract` (modèle canonique des zones `office/`) + tâche `verifyOfficeLayout` (garde anti-drift) | 2 | 🔴 À FAIRE
 |===
 
@@ -56,4 +56,15 @@ _Constat mesuré sur disque._
 . BUREAU-5 (diagnostics, peut se faire en parallèle de US-2/3)
 . BUREAU-4 (tool aggregation, le plus complexe)
 . BUREAU-6 (Docker)
-. BUREAU-7 (publication)
+. BUREAU-7 (publication) ✅ TERMINÉ (JitPack, S-002)
+
+'''
+== Historique — Session 003 — CNV-17 (JitPack canal unique)
+
+* Décision pilote : JitPack = **canal unique** des artefacts publics. Maven
+  Central (nmcp) et le Gradle Plugin Portal ne sont plus publiés pour
+  `foundry/public/**` ; `foundry/private/**` et `office/**` exclus.
+* `BUREAU-7` (publication) est soldé par JitPack : `bureau-plugin 0.0.1` servi
+  en `com.github.cccp-education.bureau-gradle:bureau-plugin:0.0.1`.
+* Shim `conventions-plugin:0.0.17`, plateforme N0 `workspace-bom:0.0.136`.
+* Rapport : `.agents/sessions/003-cnv-17-jitpack-channel.adoc`

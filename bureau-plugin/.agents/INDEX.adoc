@@ -1,8 +1,9 @@
 = INDEX.adoc — Roadmap & Statut EPICs — bureau-gradle
 :jbake-status: EAGER
 
-*Dernière mise à jour* : 2026-08-13 (Session 001 — BUREAU-1 bootstrap borough terminé.)
-*Session à venir* : 002 — BUREAU-2 CreateOffice task (scaffold office/ + git init).
+*Dernière mise à jour* : 2026-11-13 (Session 003 — CNV-17 : JitPack **canal unique** des artefacts publics ; shim `conventions-plugin:0.0.17`, BOM `0.0.136`, coordonnée `bureau-plugin:0.0.1`.)
+*Session terminée* : 003 — CNV-17 JitPack canal unique (documentation) ✅
+*Session à venir* : 004 — BUREAU-2 CreateOffice task (scaffold office/ + git init).
 
 == Vision — Bureau de l'apprenant
 
@@ -69,3 +70,12 @@ bureau-gradle/
 == Session 002 — JitPack mirror (CNV-16)
 
 Publication JitPack de bureau-plugin 0.0.1 + correctif signature conditionnelle. JitPack : 0.0.1 — POM HTTP 200.
+
+== Session 003 — CNV-17 : JitPack canal unique — 2026-11-13
+
+JitPack devient le canal **unique** des artefacts publics (Central/Portal
+cessent d'être publiés pour `foundry/public/**`). Shim `useModule` aligné sur
+`conventions-plugin:0.0.17` (racine + sous-build), plateforme N0 JitPack
+`workspace-bom:0.0.136`. Coordonnée servie :
+`com.github.cccp-education.bureau-gradle:bureau-plugin:0.0.1`. Aucune CI
+déclenchée. Rapport `.agents/sessions/003-cnv-17-jitpack-channel.adoc`.
