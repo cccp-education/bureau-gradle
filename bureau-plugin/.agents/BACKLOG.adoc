@@ -68,3 +68,14 @@ _Constat mesuré sur disque._
   en `com.github.cccp-education.bureau-gradle:bureau-plugin:0.0.1`.
 * Shim `conventions-plugin:0.0.17`, plateforme N0 `workspace-bom:0.0.136`.
 * Rapport : `.agents/sessions/003-cnv-17-jitpack-channel.adoc`
+
+== Historique — Session 004 — GBL-014-5 / GBL-014-4 (canal dual + D5)
+
+* `settings.gradle.kts` (racine + sous-build) conditionnels `-Pchannel`
+  (défaut `jitpack` ; JitPack repo + shim seulement en `jitpack`).
+* Correctif D5 : bloc `repositories {}` de projet supprimé (il supplantait le
+  `dependencyResolutionManagement`) ; 2 `platform(BOM JitPack)` retirées,
+  versions portées par le catalogue local.
+* Shim conventions `0.0.18` → `0.0.19`.
+* Aucun code Kotlin, aucun test, aucune publication.
+* Rapport : `.agents/sessions/004-gbl-014-5-channel-conditional-settings.adoc`

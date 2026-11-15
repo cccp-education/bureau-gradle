@@ -1,0 +1,16 @@
+= COMPLETED_TASKS_ARCHIVE — 2026-11 (bureau-gradle)
+:jbake-status: EAGER
+
+== Session 004 (2026-11-15) — GBL-014-5 / GBL-014-4 / correctif D5
+
+. ✅ `settings.gradle.kts` (racine + `bureau-plugin/`) conditionnels `-Pchannel`
+   (défaut `jitpack` ; JitPack repo + shim seulement en `jitpack`) — `b4ced65`.
+. ✅ Suppression du bloc `repositories {}` de projet (il supplantait le DRM des
+   settings) — `d0e302b`.
+. ✅ Suppression des 2 `platform("com.github.cccp-education.workspace-bom:…")`
+   (D5 : un BOM JitPack n'est jamais importé via `platform`) ; versions portées
+   par le catalogue local — `d0e302b`.
+. ✅ Shim conventions repoinné `0.0.18` → `0.0.19` — `f55a2b0`.
+. ✅ Gouvernance : rapport `004-…`, INDEX, SESSIONS_HISTORY, BACKLOG, archive,
+   PROMPT_REPRISE (BUREAU-2 → session 005).
+. Rapport `.agents/sessions/004-gbl-014-5-channel-conditional-settings.adoc`.

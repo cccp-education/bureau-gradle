@@ -6,6 +6,7 @@
 |===
 | # | Date | Focus | Tests | Build
 | 001 | 2026-08-13 | BUREAU-1 bootstrap borough Saint-Denis (23 fichiers, 1 test PASS, push github.com/cccp-education/bureau-gradle.git) | 1/1 PASS | BUILD SUCCESSFUL
+| 004 | 2026-11-15 | GBL-014-5 / GBL-014-4 / correctif D5 (settings conditionnels `-Pchannel`, bloc `repositories` de projet supprimé, 2 `platform(BOM JitPack)` retirées, shim `0.0.19`) | n/a | n/a (local = build, non lancé)
 |===
 
 == Session 002 — JitPack mirror (CNV-16) — 2026-11-09
@@ -23,3 +24,13 @@ cessent d'être publiés pour `foundry/public/**`). Shim `useModule` aligné sur
 servie `com.github.cccp-education.bureau-gradle:bureau-plugin:0.0.1`. Aucune CI
 déclenchée ; aucun test local. Rapport
 `.agents/sessions/003-cnv-17-jitpack-channel.adoc`.
+
+== Session 004 — GBL-014-5 / GBL-014-4 et correctif D5 — 2026-11-15
+
+`settings.gradle.kts` (racine + sous-build) conditionnels `-Pchannel` (défaut
+`jitpack` ; JitPack repo + shim seulement en `jitpack`). Correctif D5 dans
+`bureau-plugin/build.gradle.kts` : bloc `repositories {}` de projet supprimé
+(il supplantait le DRM) et 2 `platform("com.github.cccp-education.workspace-bom:…")`
+retirées — versions portées par le catalogue local. Shim conventions repoinné
+`0.0.19`. Aucune CI, aucun test, aucune publication. Rapport
+`.agents/sessions/004-gbl-014-5-channel-conditional-settings.adoc`.

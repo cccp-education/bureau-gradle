@@ -1,9 +1,10 @@
 = INDEX.adoc — Roadmap & Statut EPICs — bureau-gradle
 :jbake-status: EAGER
 
+_Derniere mise a jour : 2026-11-15 — Session 004 — GBL-014-5 : settings conditionnels `-Pchannel` (défaut `jitpack`) + correctif D5 (bloc `repositories` de projet supprimé, 2 `platform(BOM JitPack)` retirées) + shim conventions `0.0.19`_
 *Dernière mise à jour* : 2026-11-13 (Session 003 — CNV-17 : JitPack **canal unique** des artefacts publics ; shim `conventions-plugin:0.0.17`, BOM `0.0.136`, coordonnée `bureau-plugin:0.0.1`.)
-*Session terminée* : 003 — CNV-17 JitPack canal unique (documentation) ✅
-*Session à venir* : 004 — BUREAU-2 CreateOffice task (scaffold office/ + git init).
+*Session terminée* : 004 — GBL-014-5 / GBL-014-4 / correctif D5 ✅
+*Session à venir* : 005 — BUREAU-2 CreateOffice task (scaffold office/ + git init).
 
 == Vision — Bureau de l'apprenant
 

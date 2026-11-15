@@ -1,30 +1,27 @@
-= PROMPT_REPRISE — bureau-gradle — Session 003 (close) — CNV-17 JitPack canal unique
-:session: 003
-:date: 2026-11-13
+= PROMPT_REPRISE — bureau-gradle — Session 004 (close) — GBL-014-5 / GBL-014-4
+:session: 004
+:date: 2026-11-15
 :etat: TERMINÉE
-:epic_actif: CNV-17 (JitPack canal unique) — clôture documentaire
-:epic_suivant: BUREAU-2 (CreateOffice task)
+:epic_actif: GBL-014 (canal dual) — rollout + correctif D5
+:epic_suivant: BUREAU-2 (CreateOffice task) — session 005
 
-== Session 003 terminée — CNV-17 (JitPack canal unique)
+== Session 004 terminée — canal conditionnel + réparation D5
 
-Décision pilote : « la totalité vers JitPack ». JitPack est le **canal unique**
-des artefacts publics ; Maven Central (nmcp) et le Gradle Plugin Portal ne sont
-plus publiés pour `foundry/public/**`. Un artefact = un canal = un nom = une
-version. `foundry/private/**` et `office/**` exclus.
+* `settings.gradle.kts` (racine **et** `bureau-plugin/`) : repository JitPack et
+  shim `useModule` (`education.cccp.build.*`) déclarés **seulement** si
+  `-Pchannel=jitpack` (défaut) ; `dependencyResolutionManagement` JitPack idem.
+* Correctif **D5** (`bureau-plugin/build.gradle.kts`) : bloc `repositories {}`
+  de projet **supprimé** (il supplantait le DRM des settings) et les **2**
+  `platform("com.github.cccp-education.workspace-bom:workspace-bom:0.0.136")`
+  retirées — un BOM JitPack n'est jamais importé via `platform(...)` ; les
+  versions viennent du catalogue local `gradle/libs.versions.toml`.
+* Shim conventions repoinné `0.0.19`.
+* Aucun code Kotlin, aucun test, aucune publication, aucun secret.
+* Rapport : `.agents/sessions/004-gbl-014-5-channel-conditional-settings.adoc`.
 
-* Shim `useModule` : `education.cccp.build.*` →
-  `com.github.cccp-education.conventions-gradle:conventions-plugin:0.0.17`
-  (racine `bureau-gradle` + sous-build `bureau-plugin`).
-* Plateforme N0 : `com.github.cccp-education.workspace-bom:workspace-bom:0.0.136`.
-* Coordonnée servie : `com.github.cccp-education.bureau-gradle:bureau-plugin:0.0.1`.
-* Aucune CI déclenchée (pas de workflow) ; aucun test local (Local = Build,
-  Tests = CI). Zéro code Kotlin modifié.
+== Prochaine mission (session 005) — BUREAU-2 CreateOffice task
 
-*Rapport* : `.agents/sessions/003-cnv-17-jitpack-channel.adoc`
-
-== Prochaine mission (session 004) — BUREAU-2 CreateOffice task
-
-Implémenter la tâche `createOffice` dans bureau-plugin/.
+Implémenter la tâche `createOffice` dans `bureau-plugin/`.
 
 . Tâche Gradle `createOffice` (groupe `bureau`)
 . Scaffold `office/` : `articles/`, `formations/`, `specs/`, `assets/` +
@@ -42,6 +39,6 @@ US BUREAU-2.
 - 3 rôles : créer office, créer items via outils OSS, consommer formation
 - Open core : bureau-gradle (OSS) + workspace-gradle (privé, runtime agentique)
 - LLM via codebase N1 (LlmBuildService) — pas de réinvention
-- Publication : JitPack uniquement (tag `vX.Y.Z`, version servie `X.Y.Z`)
+- Publication : canal **dual** `-Pchannel` (défaut `jitpack`) ; un tag = un commit
 - Pattern article 0124 : Plugin Indépendant + Racine Consommateur
 - Local = Build, Tests = CI ; zéro secret commité
